@@ -1,0 +1,51 @@
+{
+  "name": "socrates",
+  "version": "0.0.0",
+  "description": "Examine your writing habits.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./client/webpack.config.js",
+    "build": "TODO",
+    "start:server": "nodemon server.bundle.js",
+    "watch:server": "webpack --config ./server/webpack.config.js --watch",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brainsandspace/Socrates.git"
+  },
+  "keywords": [
+    "analysis",
+    "analyze",
+    "writing"
+  ],
+  "author": "David Baker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brainsandspace/Socrates/issues"
+  },
+  "homepage": "https://github.com/brainsandspace/Socrates#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "css-loader": "^0.26.2",
+    "node-loader": "^0.6.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "bufferutil": "^2.0.1",
+    "d3": "^4.6.0",
+    "express": "^4.14.1",
+    "iohook": "^0.1.2",
+    "keypress": "^0.2.1",
+    "node-keylogger": "git+https://github.com/taosx/node-keylogger.git",
+    "nodemon": "^1.11.0",
+    "robotjs": "^0.4.5",
+    "utf-8-validate": "^3.0.1",
+    "ws": "^2.1.0"
+  }
+}
