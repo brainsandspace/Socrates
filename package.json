@@ -4,7 +4,7 @@
   "description": "Examine your writing habits.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./client/webpack.config.js",
+    "start": "webpack-dev-server --host 0.0.0.0 --config ./client/webpack.config.js",
     "build": "TODO",
     "start:server": "nodemon server.bundle.js",
     "watch:server": "webpack --config ./server/webpack.config.js --watch",

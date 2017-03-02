@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   font-family: 'Source Sans Pro';
   font-size: 2em;
+  overflow: hidden;
 }
 
 div {
@@ -12,6 +13,45 @@ div {
   word-wrap: break-word;
 }
 
+svg {
+  margin: 20px;
+}
+
+b {
+  font-size: 18px;
+}
+
 .bar {
   fill: steelblue;
+}
+
+.bar:hover {
+  fill: crimson;
+
+  &::before {
+    content: 'hey';
+  }
+}
+
+.latest {
+  fill: steelblue;
+  animation: fillFade 0.7s;
+}
+@keyframes fillFade {
+  from {
+    fill: yellowgreen;
+  }
+}
+
+
+.tooltip {
+  text-align: center;
+  font-size: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  max-height: 45px;
+  position: absolute;
+  pointer-events: none;
 }
