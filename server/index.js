@@ -5,11 +5,8 @@
 import http from 'http';
 import url from 'url';
 
-let localIP;
-require('dns').lookup(require('os').hostname(), function (err, add, fam) {
-  localIP = add;
-  console.log(`point any browser on the same local network to ${add}:1234`);
-});
+const localIP = require('ip').address();
+  console.log(`point any browser on the same local network to ${localIP}:8080`);
 
 /**************************** WEBSOCKET SERVER ******************************/
 const WebSocketServer = require('ws').Server;
@@ -36,9 +33,9 @@ import keymap from './keymap.js';
 
 const net = require('net');
 
-// TCP socket listening to netcat on local port 3333 (assumes local ip of 192.168.0.15)
+// TCP socket listening to netcat on local port 3333
 const client = new net.Socket();
-client.connect(3333, '192.168.0.15', () => {
+client.connect(3333, '127.0.0.1', () => {
   console.log('connected to tcp socket');
 });
 

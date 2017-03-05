@@ -5,7 +5,7 @@ import keymap from './keymap.js';
 try {
   const transcriptEl = document.querySelector('#transcript');
 
-  const ws = new WebSocket(`ws://localhost:5000`);
+  const ws = new WebSocket(`ws://${window.location.hostname}:5000`);
 
   ws.onopen = (evt) => {
     console.log('open evt', evt);
